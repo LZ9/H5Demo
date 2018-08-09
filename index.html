@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>澳门皇家基场</title>
-
 </head>
 <body style="background-color:darkturquoise"><!-- 设置背景色 -->
 
@@ -15,6 +14,10 @@
 <h5>绝地鸡王</h5>
 <h6>带妹吃鸡</h6>
 
+<p>
+    <a href="#baidu">查看点我</a>
+</p>
+
 <!-- 段落标签 -->
 <p style="font-family:KaiTi,serif;color:red;background-color:white">今晚吃鸡呀</p><!-- 字体颜色 -->
 
@@ -22,8 +25,83 @@
 
 <p>鸡否</p>
 
+<p><b>鸡否</b></p><!--加粗-->
+
+<p><i>鸡否</i></p><!--斜体-->
+
+<p>鸡否<sup>鸡否</sup>鸡否</p><!--上标-->
+<p>鸡否<sub>鸡否</sub>鸡否</p><!--下标-->
+
+<p>鸡否
+    <ins>鸡否</ins>
+    鸡否
+</p><!--插入文字-->
+
+<p>鸡否
+    <del>鸡否</del>
+    鸡否
+</p><!--删除文字-->
+
+<p>夏天夏天悄悄过去 带走<q>小咪咪</q></p><!--引用-->
+
+<!--对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息-->
+<p><abbr title="World Health Organization">WHO</abbr> 成立于 1948 年。</p>
+
+<!--对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息-->
+<p>The <dfn title="World Health Organization">WHO</dfn> was founded in 1948.</p>
+
+<!--对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息-->
+<p>The
+    <dfn><abbr title="World Health Organization">WHO</abbr></dfn>
+    was founded in 1948.
+</p>
+
+
+<blockquote cite="https://www.baidu.com">
+    五十年来，WWF 一直致力于保护自然界的未来。
+    WWF 工作于 100 个国家，并得到美国一百二十万会员及全球近五百万会员的支持。
+</blockquote>
+
+<!--元素不保留多余的空格和折行-->
+<code>
+    var person = {
+    firstName:"Bill",
+    lastName:"Gates",
+    age:50,
+    eyeColor:"blue"
+    }
+</code>
+
+<code>
+<pre>
+var person = {
+    firstName:"Bill",
+    lastName:"Gates",
+    age:50,
+    eyeColor:"blue"
+}
+</pre>
+</code>
+
+<p><var>E</var> = <var>m</var> <var>c</var><sup>2</sup></p>
+
+<!-- 无序列表 -->
+<ul type="square">
+    <li>Coffee</li>
+    <li>Milk</li>
+</ul>
+
+<!-- 有序列表 -->
+<ol type="I">
+    <li>Coffee</li>
+    <li>Milk</li>
+</ol>
+
+<!-- 换行 -->
+<br/>
+
 <!-- 链接标签 -->
-<a href="https://www.baidu.com">点我</a>
+<a name="baidu" href="https://www.baidu.com" target="_blank">点我</a><!-- _blank新窗口打开 _self当前页打开 -->
 
 <!-- 水平分割线 -->
 <hr/>
@@ -40,7 +118,55 @@
 
 <!-- 本地图片 -->
 <img src="me_too.jpg"/>
-<img src="me_too.jpg" width="242" height="138"/>
+<img src="me_.jpg" width="242" height="138" alt="俺也一样"/>
+
+<p>俺 <img src="me_too.jpg" align="bottom" width="121" height="69"> 在文本中</p>
+
+<br/>
+
+<table border="1" cellpadding="10" width="400">
+    <caption>我的标题</caption>
+    <tr>
+        <td bgcolor="red" align="left"> 100</td>
+        <td align="center"> 200</td>
+        <td align="right"> 300</td>
+    </tr>
+    <tr>
+        <td align="left"> 400</td>
+        <td align="center"> 500</td>
+        <td align="right"> 600</td>
+    </tr>
+</table>
+
+<br/>
+
+<table border="1" cellspacing="10">
+    <tr>
+        <th>姓名</th>
+        <th colspan="2">电话</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+    </tr>
+</table>
+
+<br/>
+
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>Bill Gates</td>
+    </tr>
+    <tr>
+        <th rowspan="2">电话</th>
+        <td>555 77 854</td>
+    </tr>
+    <tr>
+        <td>555 77 855</td>
+    </tr>
+</table>
 
 
 </body>
