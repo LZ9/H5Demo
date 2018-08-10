@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<form>
+    <label>
+        account:
+        <br>
+        <input type="text" name="account" value="admin" readonly>
+    </label>
+
+    <br>
+
+    <label>
+        password:
+        <br>
+        <input type="password" name="password" autofocus placeholder="密码">
+    </label>
+
+    <br>
+
+    <label>
+        key:
+        <br>
+        <input type="number" name="key" disabled>
+    </label>
+</form>
+
+<form>
+    <label>
+        <input type="radio" name="sex" value="male" checked>
+        基佬
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="sex" value="female">
+        女装大佬
+    </label>
+</form>
+
+<form>
+    <button type="button" onclick="alert('$account.text')">提交</button>
+</form>
+
+<br/>
+
+<label>
+    法国国旗颜色
+    <select name="flag">
+        <option value="volvo">红白蓝</option>
+        <option value="saab">红蓝白</option>
+        <option value="fiat">白红蓝</option>
+        <option value="audi">白蓝红</option>
+        <option value="fiat">蓝白红</option>
+        <option value="audi">蓝红白</option>
+    </select>
+</label>
+
+<br/>
+<br/>
+
+<form>
+    <label>
+        数量（1 到 5 之间）：
+        <input type="number" name="quantity" min="1" max="5">
+        <input type="submit">
+    </label>
+</form>
+
+<br/>
+
+<label>
+    鬼畜全明星
+    <input list="gc_all_star"/>
+    <datalist id="gc_all_star">
+        <option value="元首">
+        <option value="葛叔">
+        <option value="梁非凡">
+    </datalist>
+</label>
+
+</body>
+</html>
