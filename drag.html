@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 API</title>
+
+    <style type="text/css">
+        #div1, #div2 {
+            float: left;
+            width: 600px;
+            height: 600px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("id", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("id");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533898164877&di=e1dad2c8b998bb11fefd7b47c0cee1cc&imgtype=0&src=http%3A%2F%2Fimg.naseng.com%2Fcontentimage%2F20170506%2F149407067592231.jpg"
+         draggable="true" ondragstart="drag(event)" id="drag1"/>
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
