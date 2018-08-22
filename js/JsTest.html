@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js</title>
+
+    <style type="text/css">
+        .layout {
+            border-radius: 4px;
+            margin: 10px;
+            background-color: palegreen;
+            padding: 8px;
+            width: 700px;
+        }
+    </style>
+</head>
+
+<!--onload 和 onunload 事件会在用户进入或离开页面时被触发。-->
+<body onload="checkCookies()">
+
+<script>
+    function checkCookies() {
+        if (navigator.cookieEnabled) {
+            alert("浏览器已启用 cookie")
+        }
+        else {
+            alert("浏览器未启用 cookie")
+        }
+    }
+</script>
+
+<div class="layout">
+    <script>
+        document.write("<h1>澳门皇家赌场</h1>");
+        document.write("<p>性感荷官 在线发牌</p>");
+    </script>
+
+    <button type="button" onclick="alert('发你妹啊')">发牌</button>
+</div>
+
+<div class="layout">
+    <p id="text">海量资源 点击就送</p>
+    <button type="button" onclick="funText()">点击</button>
+    <script>
+        function funText() {
+            element = document.getElementById("text");  // 找到元素
+            if (element.innerText.match("送你大爷")) {
+                element.innerHTML = "海量资源 点击就送";
+                element.style.color = "#000000";
+            } else {
+                element.innerHTML = "送你大爷";    // 改变内容
+                element.style.color = "#ff0000";
+            }
+        }
+    </script>
+</div>
+
+<div class="layout">
+    <img id="img" onclick="changeImage()"
+         src="http://upload.chuanqi.com/attached/image/20170428/1493347695925.jpg">
+
+    <script>
+        var original = "http://upload.chuanqi.com/attached/image/20170428/1493347695925.jpg";
+        var change = "http://apps.ifeimo.com/Public/Article/image/20161123/20161123171231_62422.jpg";
+
+        function changeImage() {
+            element = document.getElementById('img')
+            if (element.src.match("20161123171231_62422")) {
+                element.src = original;
+            } else {
+                element.src = change;
+            }
+        }
+    </script>
+</div>
+
+<div class="layout">
+    <label>
+        请输入番号
+        <br>
+        <input type="text" id="carNo" autofocus placeholder="番号">
+    </label>
+
+    <button type="button" onclick="checkCarNo()">搜索</button>
+
+    <script src="test.js"></script>
+
+</div>
+
+<div class="layout">
+    <script>
+        var player = {
+            name: "Mata",
+            age: 23,
+            club: "ManUtd"
+        };
+        document.write(player.name + "<br />");
+        document.write(player["age"] + "<br />");
+        document.write(player["club"] + "<br />");
+    </script>
+</div>
+
+<div class="layout">
+    <script>
+        document.write(Date());
+    </script>
+</div>
+
+<div class="layout">
+    <label>
+        离开输入框时，会将输入的字符转为大写
+        <br>
+        <input type="text" id="upperCase" onchange="toUpperCase()">
+    </label>
+
+    <script>
+        function toUpperCase() {
+            var element = document.getElementById("upperCase");
+            element.value = element.value.toUpperCase();
+        }
+    </script>
+
+</div>
+
+<div class="layout">
+
+    <p onmouseover=over(this); onmouseout=out(this); onmousedown=down(this); onmouseup=up(this)>
+        鼠标移过来</p>
+    <script>
+        function over(obj) {
+            obj.innerHTML = "乖"
+        }
+
+        function out(obj) {
+            obj.innerHTML = "鼠标移过来"
+        }
+
+        function down(obj) {
+            obj.innerHTML = "还不松手"
+        }
+
+        function up(obj) {
+            obj.innerHTML = "鼠标移过来"
+        }
+    </script>
+</div>
+
+<div class="layout">
+
+    <button type="button" onclick=window.close()>关闭</button>
+</div>
+
+</body>
+
+
+</html>
