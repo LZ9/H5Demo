@@ -16,18 +16,18 @@
 </head>
 
 <!--onload 和 onunload 事件会在用户进入或离开页面时被触发。-->
-<body onload="checkCookies()">
+<!--<body onload="checkCookies()">-->
 
-<script>
-    function checkCookies() {
-        if (navigator.cookieEnabled) {
-            alert("浏览器已启用 cookie")
-        }
-        else {
-            alert("浏览器未启用 cookie")
-        }
-    }
-</script>
+<!--<script>-->
+    <!--function checkCookies() {-->
+        <!--if (navigator.cookieEnabled) {-->
+            <!--alert("浏览器已启用 cookie")-->
+        <!--}-->
+        <!--else {-->
+            <!--alert("浏览器未启用 cookie")-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
 
 <div class="layout">
     <script>
@@ -150,7 +150,15 @@
     <button type="button" onclick=window.close()>关闭</button>
 </div>
 
-</body>
+<div class="layout">
+    <script>
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        document.write("浏览器宽度：" + width);
+        document.write("浏览器高度：" + height);
+    </script>
 
+    <button type="button" onclick="window.location.reload(true);">刷新</button>
+</div>
 
 </html>
