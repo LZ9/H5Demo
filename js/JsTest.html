@@ -19,14 +19,14 @@
 <!--<body onload="checkCookies()">-->
 
 <!--<script>-->
-    <!--function checkCookies() {-->
-        <!--if (navigator.cookieEnabled) {-->
-            <!--alert("浏览器已启用 cookie")-->
-        <!--}-->
-        <!--else {-->
-            <!--alert("浏览器未启用 cookie")-->
-        <!--}-->
-    <!--}-->
+<!--function checkCookies() {-->
+<!--if (navigator.cookieEnabled) {-->
+<!--alert("浏览器已启用 cookie")-->
+<!--}-->
+<!--else {-->
+<!--alert("浏览器未启用 cookie")-->
+<!--}-->
+<!--}-->
 <!--</script>-->
 
 <div class="layout">
@@ -159,6 +159,41 @@
     </script>
 
     <button type="button" onclick="window.location.reload(true);">刷新</button>
+</div>
+
+<div class="layout">
+
+    <label>
+        奇偶数判断
+        <input type="text" id="oddEven" autofocus placeholder="请输入整数">
+        <button type="button" onclick="oddEven()">校验</button>
+
+        <br>
+        <p id="oddEvenResult"></p>
+    </label>
+
+    <script>
+        function oddEven() {
+            resultText = document.getElementById("oddEvenResult");
+            num = document.getElementById("oddEven");
+
+            if (num.value === ""){
+                resultText.style.color = "#ff0000";
+                resultText.innerText = "请输入整数";
+                return
+            }
+
+            var reg = /^[0-9]*$/;
+            if (!reg.test(num.value)) {
+                resultText.style.color = "#ff0000";
+                resultText.innerText = "请输入整数";
+                return
+            }
+            resultText.style.color = "#000000";
+            resultText.innerText = parseInt(num.value) % 2 === 0 ? "偶数" : "奇数"
+        }
+    </script>
+
 </div>
 
 </html>
